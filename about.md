@@ -1,11 +1,12 @@
 ---
-layout: page
-title: About
+layout: about
+title: Will Dampney 
 permalink: /about/
+
+byline: "Software Engineer, Build Engineer, Musician and Technologist."
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+A Software Engineer by trade, with keen interests in music technology and photography.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+In software development, I am focused on __agile development__, enabling __code quality__ and implementing __continuous integration__ (including _TDD_, _BDD_ and _continuous deployment_); Building systems that solve real problems.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)

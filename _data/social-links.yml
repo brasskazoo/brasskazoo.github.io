@@ -1,0 +1,31 @@
+- name: Email
+  icon: email
+  url: mailto:will@brasskazoo.com
+
+- name: Twitter
+  icon: twitter-2
+  url: http://twitter.com/#!/brasskazoo
+
+- name: GitHub
+  icon: github
+  url: https://github.com/brasskazoo
+
+- name: LinkedIn
+  icon: linkedin
+  url: http://au.linkedin.com/in/wdampney
+
+- name: StackOverflow Careers
+  icon: stackoverflow
+  url: http://careers.stackoverflow.com/wdampney
+
+- name: StackOverflow
+  icon: stackoverflow
+  url: http://stackoverflow.com/users/6340/brass-kazoo
+
+- name: Flickr
+  icon: flickr 
+  url: https://www.flickr.com/photos/brasskazoo
+
+- name: Soundcloud
+  icon: soundcloud
+  url: http://soundcloud.com/brasskazoo

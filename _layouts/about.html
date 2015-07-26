@@ -1,0 +1,52 @@
+---
+layout: default
+post_class: post-template page-template
+---
+
+<head>
+        <link rel="stylesheet" type="text/css" href="/assets/css/about.css" />
+
+</head>
+
+<nav class="main-nav clearfix">
+    <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
+    <a class="subscribe-button icon-feed" href="{{ site.baseurl }}rss.xml">Subscribe</a>
+</nav>
+
+
+<main class="content" role="main">
+    <article class="post">
+        <!-- <header class="post-header">
+            <a id="blog-logo" href="{{site.baseurl}}">
+                {% if site.logo %}
+                    <img src="{{site.logo}}" alt="{{ site.name }}" />
+                {% else %}
+                    <span class="blog-title">{{ site.name }}</span>
+                {%endif%} 
+            </a>
+        </header> -->
+
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.byline %}
+        <i>{{page.byline}}</i>
+        {% endif %}
+        <div>&nbsp;</div>
+
+        <section class="post-content about about-col-1">
+            {{content}}
+        </section>
+
+        <aside id="profile-links" class="about about-col-2">
+            {% for social in site.data.social-links %}
+            <div>                            
+                    <a href="{{ social.url }}" target="_blank"><img src="/assets/images/icons/24px/{{ social.icon }}.png"/>
+                    <span>
+                    {{ social.name }}
+                    </span>
+                    </a>                
+            </div>
+            {% endfor %}            
+        </aside>
+    </article>
+
+</main>
