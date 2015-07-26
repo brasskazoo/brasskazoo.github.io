@@ -24,4 +24,5 @@ permalink:		'/:year/:month/:title.html'
 nav:
   main:
     blog: "/"
+    topics: "/topics"
     about: "/about"
