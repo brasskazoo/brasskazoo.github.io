@@ -19,6 +19,9 @@
 </head>
 <body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
 
+<!-- Navigation -->
+    {% include nav.html %}
+
     {{ content }}
     <footer class="site-footer clearfix">
       <section class="copyright">

@@ -19,3 +19,9 @@ author_tag:		'Software and Build Engineer'
 
 # permalink
 permalink:		'/:year/:month/:title.html'
+
+# Internal nav
+nav:
+  main:
+    blog: "/"
+    about: "/about"
