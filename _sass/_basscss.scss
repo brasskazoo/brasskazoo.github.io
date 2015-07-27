@@ -635,10 +635,12 @@ body {
 
 a {
   color: #0074d9;
+  transition: color ease 0.3s;
   text-decoration: none;
 }
 
 a:hover {
+  color: #00265d;
   text-decoration: underline;
 }
 

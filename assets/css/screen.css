@@ -185,14 +185,7 @@ html {
 
 /* h1-6 Replaced by basscss */
 
-a {
-    color: #4A4A4A;
-    transition: color ease 0.3s;
-}
 
-a:hover {
-    color: #111;
-}
 
 p, ul, ol, dl {
     -webkit-font-feature-settings: 'liga' 1, 'onum' 1, 'kern' 1;
@@ -702,7 +695,11 @@ body:not(.post-template) .post-title {
 }
 
 .post-title a {
-    text-decoration: none;
+    color: #4A4A4A;
+}
+
+.post-title a:hover {
+    color: #111;
 }
 
 .post-excerpt p {
