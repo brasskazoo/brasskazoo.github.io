@@ -32,11 +32,11 @@ post_class: post-template page-template
         {% endif %}
         <div>&nbsp;</div>
 
-        <section class="post-content about about-col-1">
+        <section class="post-content col col-9">
             {{content}}
         </section>
 
-        <aside id="profile-links" class="about about-col-2">
+        <aside id="profile-links" class="col-right col-3">
             {% for social in site.data.social-links %}
             <div>                            
                     <a href="{{ social.url }}" target="_blank"><img src="/assets/images/icons/24px/{{ social.icon }}.png"/>

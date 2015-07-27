@@ -12,3 +12,17 @@
 @import "basscss";
 @import "syntax";
 @import "responsive-nav";
+
+// Modifications for aside (about page). 
+aside#profile-links {
+    font-family: "Open Sans", sans-serif;  
+    font-size: 0.8em;
+  	padding-left: 1em;    
+}
+aside#profile-links a, a:hover {
+	text-decoration: none;   
+}
+aside#profile-links img {
+	vertical-align: middle;
+ 	margin-bottom: 0.35em; 
+}

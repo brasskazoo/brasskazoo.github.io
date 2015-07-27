@@ -14,13 +14,13 @@
   icon: linkedin
   url: http://au.linkedin.com/in/wdampney
 
-- name: StackOverflow Careers
-  icon: stackoverflow
-  url: http://careers.stackoverflow.com/wdampney
-
 - name: StackOverflow
   icon: stackoverflow
   url: http://stackoverflow.com/users/6340/brass-kazoo
+
+- name: SO Careers
+  icon: stackoverflow
+  url: http://careers.stackoverflow.com/wdampney
 
 - name: Flickr
   icon: flickr 
