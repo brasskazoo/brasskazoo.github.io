@@ -8,12 +8,10 @@ permalink: /topics/
 
 {% for category in site.categories %}
     {% assign cat = category | first %}
-{{ cat | capitalize }}
+{{ cat }} ({{site.categories[cat] | size}})
 ---
-{% for posts in cat %}
-{% for post in posts %}
-[ {{ post.title }} ] ({{ post.url }})
-{% endfor %}
+{% for post in site.categories[cat] | sort: 'date' %}
+`{{post.date  | date: "%b %d, %Y" }}` [ {{ post.title }} ]({{ post.url }})
 {% endfor %}
 
 {% endfor %}
