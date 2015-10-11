@@ -50,7 +50,7 @@ single-line decimal input:
     android:singleLine="true" 
     android:inputType="numberDecimal" 
     ... 
->
+/>
 {% endhighlight %}
 
 The _inputType_ also sets the soft keyboard (popup keyboard) to the

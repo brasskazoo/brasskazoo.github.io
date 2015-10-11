@@ -48,11 +48,13 @@ following function. This will disable the `autoTimestamp`, and set the
 {% highlight groovy %}
 
     def disableAutoTimestamp(Class domClass) {
-    def grailsSave = domClass.metaClass.pickMethod('save', [Map] as Class[]) 
+    def grailsSave = domClass.metaClass.pickMethod('save',
+        [Map] as Class[])
 
     domClass.metaClass.save = { Map params ->
 
-        def m = new GrailsDomainBinder().getMapping(delegate.getDomainClass()) 
+        def m = new GrailsDomainBinder()
+            .getMapping(delegate.getDomainClass())
         println("Disabling autoTimestamp for ${domClass.name}") 
 
         if (m?.autoTimestamp) m.autoTimestamp = false 
@@ -65,13 +67,14 @@ following function. This will disable the `autoTimestamp`, and set the
         if (colList.contains("dateCreated")) { 
             println "Setting ${domClass.simpleName}.dateCreated to now" 
             domClass.metaClass.setProperty(delegate, "dateCreated",
-                new Date(System.currentTimeMillis()))   // Update this when using Java8
+                new Date(System.currentTimeMillis()))
+                // Update this when using Java8
         } 
 
         if (colList.contains("lastUpdated")) { 
             println "Setting ${domClass.simpleName}.lastUpdated to now" 
-            domClass.metaClass.setProperty(delegate, "lastUpdated", new 
-Date(System.currentTimeMillis())) 
+            domClass.metaClass.setProperty(delegate, "lastUpdated",
+                new Date(System.currentTimeMillis()))
         } 
         grailsSave.invoke(delegate, [params] as Object[]) 
     } 
@@ -85,7 +88,7 @@ question](http://stackoverflow.com/questions/28735133/pull-domain-mapping-in-boo
 that I based this code on iterated through all classes with: 
 
 {% highlight java %}
-grailsApplication.domainClasses.each { gdc -&gt;
+grailsApplication.domainClasses.each { gdc ->
     def domClass = gdc.clazz 
     ... 
 } 
@@ -102,7 +105,7 @@ import org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsDomainBinder
 
 class BootStrap { 
 
-    def init = { servletContext -&gt; 
+    def init = { servletContext ->
         if (Environment.current == Environment.TEST) { 
             disableAutoTimestamp(YourDomain.class) 
         } 

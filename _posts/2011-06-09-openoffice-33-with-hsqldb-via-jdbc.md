@@ -38,15 +38,7 @@ Under `Preferences > OpenOffice.org > Java`, ensure that a JRE is
 registered. Open up the `classpath` dialog, and add an archive entry for the 
 hsqldb jar: 
 
-<table align="center" cellpadding="0" cellspacing="0" 
-class="tr-caption-container" style="margin-left: auto; margin-right: auto; 
-text-align: center;"><td style="text-align: center;">[<img border="0" 
-height="169" 
-src="http://3.bp.blogspot.com/-PO0ALgVuGy8/TssMSsRbINI/AAAAAAAAABw/zcWbtT3WUQw/s320/OO-Java1.png" 
-width="320" 
-/>](http://3.bp.blogspot.com/-PO0ALgVuGy8/TssMSsRbINI/AAAAAAAAABw/zcWbtT3WUQw/s1600/OO-Java1.png)<td 
-class="tr-caption" style="text-align: center;">OpenOffice Java and Classpath 
-Configuration
+<img border="0" height="169" alt="OpenOffice Java and Classpath Configuration" src="http://3.bp.blogspot.com/-PO0ALgVuGy8/TssMSsRbINI/AAAAAAAAABw/zcWbtT3WUQw/s320/OO-Java1.png" width="320" />
 
 This is basically where I had been running into trouble. My application originally used hsqldb version 2.0.0 with Hibernate. Despite the
 driver class being the same (`org.hsqldb.jdbcDriver`), it seems OpenOffice would not recognise this version of hsqldb.
@@ -62,14 +54,7 @@ Enter the JDBC Connection details:
 Note that 'database' is the collective database name for the files making up 
 the hsqldb instance (e.g. database.log, database.properties, database.script). 
 
-<table align="center" cellpadding="0" cellspacing="0" 
-class="tr-caption-container" style="margin-left: auto; margin-right: auto; 
-text-align: center;"><td style="text-align: center;">[<img border="0" 
-height="209" 
-src="http://1.bp.blogspot.com/-549K6qCN-Ik/TssMyvHRhGI/AAAAAAAAAB4/i8Jj4-EeFEs/s320/OO-Java2.png" 
-width="320" 
-/>](http://1.bp.blogspot.com/-549K6qCN-Ik/TssMyvHRhGI/AAAAAAAAAB4/i8Jj4-EeFEs/s1600/OO-Java2.png)<td 
-class="tr-caption" style="text-align: center;">HSQLDB JDBS Connection
+<img border="0" height="209" alt="HSQLDB JDBS Connection" src="http://1.bp.blogspot.com/-549K6qCN-Ik/TssMyvHRhGI/AAAAAAAAAB4/i8Jj4-EeFEs/s320/OO-Java2.png" width="320" />
 
 Click 'Next', enter the default username of `sa` (No password required).
 Accept the defaults for registering the database, choose a location to save 
