@@ -16,6 +16,8 @@ google_analytics: 'UA-31903273-1'
 url:            'http://blog.brasskazoo.com'
 author:         'Will Dampney'
 author_tag:		'Software and Build Engineer'
+rss_path: '/rss'
+rss_name: 'feed.xml'
 
 # permalink
 permalink:		'/:year/:month/:title.html'
