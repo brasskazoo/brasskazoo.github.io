@@ -23,23 +23,21 @@ Managing Customisations
 ---
 I've created a `~/.bash_aliases` and `~/.bash_custom` file to manage customisations to my WLS environment (and make it easy to migrate to another machine if neccesary). Both are referenced in `~/.bashrc` like this:
 
-{% highlight bash %}
+```bash
+# Alias definitions.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
-    # Alias definitions.
-    
-    if [ -f ~/.bash_aliases ]; then
-        . ~/.bash_aliases
-    fi
+...
 
-    ...
-    
-    # CUSTOMISATIONS 
-    # Use a stand-alone file for environment customisations
-    #
-    if [ -f ~/.bash_custom ]; then
-        . ~/.bash_custom
-    fi
-{% endhighlight %}
+# CUSTOMISATIONS 
+# Use a stand-alone file for environment customisations
+#
+if [ -f ~/.bash_custom ]; then
+    . ~/.bash_custom
+fi
+```
 
 Launching Sublime Text via an alias (or Atom, or any other Windows program)
 ---
@@ -61,9 +59,9 @@ Copying ssh keys from Windows
 
 In `~/.bash_custom`, I use `rsync` to copy files from my Windows home to my linux `~/.ssh/` directory. This allows me to keep my linux environment in sync while using Windows applications that might require the SSH keys (e.g. git commits through an IDE).
 
-{% highlight bash %}
-    rsync -a --ignore-existing --chmod=600 --no-owner --no-group /mnt/c/Users/wdampney/.ssh/ ~/.ssh
-{% endhighlight %}
+```bash
+rsync -a --ignore-existing --chmod=600 --no-owner --no-group /mnt/c/Users/wdampney/.ssh/ ~/.ssh
+```
 
 **Note** Another caveat: if you edit the files that come from Windows in say, `vim`, something happens with permissions and `rsync` loses the ability to overwrite it - and so the attempt to copy the file over fails. If this happend, you need to tack down the file in Windows Explorer and delete it.
 
@@ -76,9 +74,9 @@ From https://www.vagrantup.com/docs/other/wsl.html:
 
 The Windows Vagrant exe can't be launched from WLS - you'll need to install the deb package and set the following in your bash profile:
 
-{% highlight bash %}
-    export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
-{% endhighlight %}
+```bash
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+```
 
 Once that is done, you can use the usual `vagrant up` and `vagrant ssh` commands as usual - and Vagrant will handle the mapping of functions and devices from the linux Vagrant (`/usr/bin/vagrant`) to Windows Vagrant and VirtualBox.
 
@@ -91,15 +89,12 @@ I highly recommend using Solarized colour schemes - https://github.com/neilpa/cm
     
 I also use a customised prompt to display git branches in `~/.bashrc` (this took a bit of trial-and-error, so YMMV):
 
-{% highlight bash %}
-
+```bash
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     PS1="${debian_chroot:+($debian_chroot)}\[\033[01;96m\]\u\[\033[38;5;7m\]@\[\033[38;5;94m\]\l \[$(tput sgr0)\]\[\033[38;5;6m\][\[\033[38;5;3m\]\W\[\033[38;5;6m\]]\[\033[38;5;9m\]\$(__git_ps1) \[$(tput sgr0)\]\[\033[38;5;7m\]\\$ \[$(tput sgr0)\]"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-
-{% endhighlight %}    
-    
+```
     
