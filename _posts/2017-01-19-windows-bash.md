@@ -41,7 +41,7 @@ I've created a `~/.bash_aliases` and `~/.bash_custom` file to manage customisati
 Launching Sublime Text via an alias (or Atom, or any other Windows program)
 ---
 
-In `~/.bash_aliases`, I have created an alias to the Windows `subl.exe` which will open a new sublime window:
+In `~/.bash_aliases`, I have created an alias to `subl.exe` which will open a new sublime window:
 
 `alias sublime='/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe -n '`
 
@@ -51,7 +51,7 @@ I use this in conjunction with a symlink to a Windows `Projects` directory, so I
     sublime README.md
     sublime some-project/
 
-**Note:** This doesn't work on WLS files and folders - I can't use this to open `~/.bashrc` or `~/` for example, I guess because the path isn't easily translated to the Windows equivalent due to how the WLS directories are organised 
+**Note:** This works well under symlinks to Windows directories - it doesn't work directly on WLS files and folders, e.g. I can't use this to open `~/.bashrc` or `~/`, I guess because the path isn't easily translated to the Windows equivalent due to how the WLS directories are organised 
 
 Copying ssh keys from Windows
 ---
