@@ -4,7 +4,7 @@ description: > # this means to ignore newlines until next property:
   Real-life adventures in Software and Build Engineering
 meta_description: "Will Dampney, Real-life adventures in Software and Build Engineering"
 
-markdown: redcarpet
+markdown: GFM
 highlighter: rouge
 logo: false
 paginate: 15
