@@ -8,7 +8,7 @@ author: brasskazoo
 
 So you've setup default encryption on your bucket using the standard SSS-S3:
 
-![S3 Default Encryption](/assets/images/2019/12/AWS S3 Default Encryption.png)
+<img src="/assets/images/2019/12/AWS%20S3%20Default%20Encryption.png"  width="480">
 
 But take note - to properly ensure that files being uploaded are encypted with the intended encryption method, you need to take measures in the S3 policy to deny attempts to override the default settings.
 
