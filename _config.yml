@@ -4,8 +4,8 @@ description: > # this means to ignore newlines until next property:
   Real-life adventures in Software and Build Engineering
 meta_description: "Will Dampney, Real-life adventures in Software and Build Engineering"
 
-markdown: redcarpet
-highlighter: pygments
+markdown: GFM
+highlighter: rouge
 logo: false
 paginate: 15
 baseurl: /
@@ -15,7 +15,7 @@ google_analytics: 'UA-31903273-1'
 # Details for the RSS feed generator
 url:            'http://blog.brasskazoo.com'
 author:         'Will Dampney'
-author_tag:		'Software and Build Engineer'
+author_tag:		'Software and Cloud Engineer'
 rss_path: '/rss'
 rss_name: 'feed.xml'
 
