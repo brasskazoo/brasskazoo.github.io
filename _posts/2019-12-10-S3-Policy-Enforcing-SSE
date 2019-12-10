@@ -1,4 +1,10 @@
-# S3 Policy - Enforcing default SSE-S3 encryption
+---
+layout: post
+title: "S3 Policy - Enforcing default SSE-S3 encryption"
+date: '2019-12-10'
+categories: aws s3 encryption security s3-policy
+author: brasskazoo
+---
 
 So you've setup default encryption on your bucket using the standard SSS-S3:
 
